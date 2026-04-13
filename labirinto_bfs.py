@@ -91,7 +91,7 @@ if __name__ == "__main__":
     end = (19, 19) # Define fim
 
     start_time = time.perf_counter() # Mede tempo da busca
-    path = tree_search(maze, start, end) # Calcula tempo total
+    path = bfs(maze, start, end) # Calcula tempo total
     end_time = time.perf_counter() # Mostra o tempo
 
     elapsed_time = end_time - start_time

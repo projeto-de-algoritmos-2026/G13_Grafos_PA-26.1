@@ -6,6 +6,7 @@ Este projeto implementa a geração de um labirinto aleatório e a busca de cami
 
 ## Alunos
 - Amanda Gonçalves Sobrinho Abreu (211030925)
+- Arthur Rodrigues Sousa (211030291)
 
 ## Funcionalidades
 
@@ -41,3 +42,7 @@ pip install matplotlib
 ```bash
 python labirinto_bfs.py
 ```
+
+## Saída
+
+![saida](./image-1.png)
