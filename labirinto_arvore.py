@@ -28,28 +28,36 @@ def generate_maze(rows, cols):
 def tree_search(maze, start, end):
     rows, cols = len(maze), len(maze[0])
 
-    # cada elemento da fila é um caminho completo (árvore de caminhos)
-    queue = deque()
-    queue.append([start])
+    if maze[start[0]][start[1]] != 0 or maze[end[0]][end[1]] != 0:
+        return None
 
-    directions = [(-1,0), (1,0), (0,-1), (0,1)]
+    queue = deque([start])
+    visited = {start}
+    previous = {start: None}
+    directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
     while queue:
-        path = queue.popleft()
-        current = path[-1]
+        current = queue.popleft()
 
         if current == end:
-            return path
+            path = []
+
+            while current is not None:
+                path.append(current)
+                current = previous[current]
+
+            return path[::-1]
 
         for dr, dc in directions:
             r = current[0] + dr
             c = current[1] + dc
+            neighbor = (r, c)
 
             if (0 <= r < rows and 0 <= c < cols and
-                maze[r][c] == 0 and (r, c) not in path):
-
-                new_path = path + [(r, c)]
-                queue.append(new_path)
+                maze[r][c] == 0 and neighbor not in visited):
+                visited.add(neighbor)
+                previous[neighbor] = current
+                queue.append(neighbor)
 
     return None
 
