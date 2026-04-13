@@ -45,4 +45,4 @@ python labirinto_bfs.py
 
 ## Saída
 
-![saida](./image-1.png)
+![saida](image/image-1.png)
