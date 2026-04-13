@@ -1,8 +1,14 @@
 import random
 import time
 from collections import deque
-import matplotlib.pyplot as plt
+import matplotlib
 
+try:
+    matplotlib.use('TkAgg')
+except ImportError:
+    matplotlib.use('Agg')
+
+import matplotlib.pyplot as plt
 
 def generate_maze(rows, cols):
     rows = rows if rows % 2 == 1 else rows + 1
