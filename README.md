@@ -4,6 +4,9 @@
 
 Este projeto implementa a geração de um labirinto aleatório e a busca de caminho em Python. A construção do labirinto usa **DFS (Depth-First Search)** com backtracking, enquanto a procura pelo menor caminho usa **BFS (Breadth-First Search)**. O projeto também inclui visualização gráfica do labirinto e do caminho encontrado com **matplotlib**.
 
+## Alunos
+- Amanda Gonçalves Sobrinho Abreu (211030925)
+
 ## Funcionalidades
 
 - Geração de labirinto aleatório
