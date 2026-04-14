@@ -8,6 +8,9 @@ Este projeto implementa a geração de um labirinto aleatório e a busca de cami
 - Amanda Gonçalves Sobrinho Abreu (211030925)
 - Arthur Rodrigues Sousa (211030291)
 
+## Vídeo
+ [Apresentação Amanda e Arthur](https://youtu.be/dhSVdAhV2Cs)
+
 ## Funcionalidades
 
 - Geração de labirinto aleatório
